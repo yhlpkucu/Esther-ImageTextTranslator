@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block head %}
+<title>Text Reader</title>
+<!-- coming from Bootstrap, for responsive design -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- importing Bootstrap files through CDN 
+  twitter bootstrap : https://getbootstrap.com/1.4.0/ -->
+<link rel="stylesheet" href="https://getbootstrap.com/1.4.0/assets/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type=text/javascript src="{{ url_for('static', filename='camera.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+</head>
+
+<body>
+    {% block topbar %}
+    <div id="topbar" class="topbar">
+        <div class="container topcontainer">
+            <p class="brand" href="#" style="text-align:center">OCR Translator</p>
+        </div>
+
+    </div>
+    {% endblock %}
+    {% block content %}{% endblock %}
+    {% block bottombar %}
+    <div id="bottombar" class="bottombar", style="position:fixed;bottom:0px">
+        <div class="container bottomcontainer">
+            <p class="brand" href="#" style="text-align:center">This is a course project demo of COMS 6998 in Columbia University</p>
+        </div>
+
+    </div>
+    {% endblock %}
+</body>
+</html>

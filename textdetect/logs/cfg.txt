@@ -1,0 +1,51 @@
+synthetic_train_data_dir: ['/share/zhui/reg_dataset/NIPS2014']
+real_train_data_dir: /data/zhui/benchmark/cocotext_trainval
+extra_train_data_dir: ['/share/zhui/reg_dataset/CVPR2016']
+test_data_dir: /share/zhui/reg_dataset/IIIT5K_3000
+MULTI_TRAINDATA: False
+batch_size: 128
+workers: 8
+height: 64
+width: 256
+keep_ratio: False
+voc_type: ALLCASES_SYMBOLS
+mix_data: False
+num_train: inf
+num_test: inf
+aug: False
+lexicon_type: 0
+image_path: 
+tps_inputsize: [32, 64]
+tps_outputsize: [32, 100]
+arch: ResNet_ASTER
+dropout: 0.5
+max_len: 100
+n_group: 1
+STN_ON: False
+tps_margins: [0.05, 0.05]
+stn_activation: none
+num_control_points: 20
+stn_with_dropout: False
+with_lstm: False
+decoder_sdim: 512
+attDim: 512
+lr: 1
+momentum: 0.9
+weight_decay: 0.0
+grad_clip: 1.0
+loss_weights: [1, 1, 1]
+resume: 
+evaluate: False
+epochs: 6
+start_save: 0
+seed: 1
+print_freq: 100
+cuda: False
+evaluation_metric: accuracy
+evaluate_with_lexicon: False
+beam_width: 5
+logs_dir: /home/yhl/Desktop/ocr-translate-6998-proj/textdetect/logs
+real_logs_dir: /media/mkyang/research/recognition/selfattention_rec
+debug: False
+vis_dir: 
+run_on_remote: False

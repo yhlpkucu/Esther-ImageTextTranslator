@@ -1,0 +1,48 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends 'base.html' %}
+
+{% block head %}
+    {{ super() }}
+    <script>
+        $(window).ready(loadCamera);
+    </script>
+{% endblock %}
+
+{% block topbar %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<div class="container container2">
+    <div class="content">        
+        <div id="disp-area">
+            <p style="text-align:center">Capture your image.</p>
+            <div>
+                <video id="player" autoplay="autoplay" style="clear:both;margin:auto;display:block"></video>
+            </div>
+            <div style="margin-top:20px">
+                <button id="cap" class="btn large success pad" onclick="clickCapture()" style="clear:both;margin:auto;display:block">Capture</button>
+            </div>           
+        </div>
+        <div id="disp-area2">
+            <div class="inner-container">              
+                <div>
+                    <div><img src="" alt="Snapshot" id="snapshot" class="pad"></div>                        
+                </div>
+                <h5 style="text-align:center">Detected text</h5>
+                <div id="result">
+                    <label for="result-list">Text </label>
+                    <select name="products" id="result-list" size="5" disabled="disabled"></select>
+                </div>
+                <div class="pad">
+                    <p><b>NOTE : </b> The recognition result is not in the order of view.</p>
+                </div>
+                <button id="camback" class="btn large info" style="float:right;" onclick="loadCamera()">Back to Camera</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block bottombar %}
+    {{ super() }}
+{% endblock %}
+</body></html>
