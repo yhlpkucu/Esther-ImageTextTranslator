@@ -40,7 +40,7 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 </summary>
   
 
- <details >
+ <details open>
  <summary>
   <strong>Model Architecture</strong>
  </summary>
@@ -52,7 +52,7 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
  <br/>
 
 
- <details >
+ <details open>
  <summary>
   <strong>Detector Model</strong>
  </summary>
@@ -69,7 +69,7 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
  <br/>
 
 
- <details >
+ <details open>
  <summary>
   <strong>Recognizor Model</strong>
  </summary>
@@ -112,6 +112,8 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 1. `conda env create -n <YOUR_ENVIRONMENT_NAME> -f environment.yml`
 
 2. `pip install google-cloud-translate`
+
+ - Note: If you want to use the google-cloud API, please follow [this tutorial](https://cloud.google.com/translate/docs/setup) to set up your environment. 
 
 3. `python app.py`
 
