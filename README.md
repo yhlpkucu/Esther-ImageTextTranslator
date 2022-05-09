@@ -47,16 +47,40 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 
 ### Repository Directory
 
+- `static`: css, JS and pre-trained model
 
+- `templates`: html
 
+- `tess_dict`: result of text recognition
 
+- `testdetect`: model
 
+- `translation.py`: google translation API
+
+- `app.py`: main program
+
+- `app_withoutTrans.py`: Only return recognition result, not translation result.
+
+- `environment.yml`: Record dependencies
 
 
 ### How to run?
 
+1. `conda env create -n <YOUR_ENVIRONMENT_NAME> -f environment.yml`
 
+2. `pip install google-cloud-translate`
 
+3. `python app.py`
+
+4. Then you can access the web service through URL you defined 
+ 
+ - Note: Default is http://127.0.0.1:5000
 
 
 ### Results & Observations
+
+![image](https://user-images.githubusercontent.com/63638608/167321697-162bb75d-cfe9-4178-a625-f6fd90d1d5db.png)
+
+![image](https://user-images.githubusercontent.com/63638608/167321711-24f7fa7b-410c-41f6-bef3-ea789ad0ac8b.png)
+
+
