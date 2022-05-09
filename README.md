@@ -40,6 +40,49 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 </summary>
   
 
+ <details >
+ <summary>
+  <strong>Model Architecture</strong>
+ </summary>
+<img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167324908-2a0f45db-e54e-49d1-8f8b-478175fb3358.png">
+
+
+ </details>
+
+ <br/>
+
+
+ <details >
+ <summary>
+  <strong>Detector Model</strong>
+ </summary>
+
+<img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167324951-57312e67-993a-4e50-879b-985ac1589b03.png">
+  
+- We use the **EAST** model as the text detector. It has three part, a feature extractor stem, a feature-merging branch and an output layer. The trick here is to do **concatenation along the channel axis to make the feature map more thick and deep**. In feature extractor stem, it first extract a small part and then larger it until forth of the original size in f1. 
+  
+- Then in merging branch, the upper layer’s output is unpooled and concat with smaller lower layer output until it is deep enough. Finally it output score map, text boxes, text rotation angle and text quadrangle coordinates. By using well-defined loss, It could examine different size, different direction text.
+
+
+ </details>
+ 
+ <br/>
+
+
+ <details >
+ <summary>
+  <strong>Recognizor Model</strong>
+ </summary>
+
+<img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167324972-e42b063c-7f47-4f07-9dfb-d5d11728015e.png">
+
+- We use **ASTER model** as the word recognizer. ASTER is the combination of two networks: <u>The Rectification Network</u> and the <u>Text Recognition Network</u>. The Rectification Network first resize the network, and use the localization network to predict control points, Then use them to do Thin-Plate-Spline transformation and generate grids and perform sampling to get the rectified image.
+  
+- The text recognition network received the rectified input from the rectification network, and use the Seq-to-Seq model to solve the recognition problem. The encoder part convert the feature map to feature sequence, and uses a Bidirectional LSTM to capture the long time dependencies between two directions. The decoder part uses the attention based seq-to-seq to capture output, and use the log-softmax to select bidirectional results with higher score.
+
+  
+ </details>
+
 </details>
 
 <br/>
