@@ -3,30 +3,30 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 COMSE6998_009_2022 Deep Learning System Performance | Final Project
 
-###  Project Overview
+###  🌟 Project Overview
 
 
 
 <details open>
 <summary>
- <strong>Description</strong>
+ <strong>✨ Description</strong>
 </summary>
   
 <br/>
   
-Current translation applications force users to manually input text sentences from a foreign language, which is both inconvenient to input and easily miswritten. Users might give up their translation in the end. We simplify this process by letting users simply input live photos with text, and return real time translation results in any user-specified language. 
+Current translation applications force users to manually input text sentences from a foreign language, which is both inconvenient to input and easily miswritten. Users might give up their✨ translation in the end. We simplify this process by letting users simply input live photos with text, and return real time translation results in any user-specified language. 
   
 We use **EAST** as the detection model and **ASTER** as the recognization model. Then we use the **google translation API** to acquire translation result in the target language. After launching this feature on the edge devices, users could do text translation in any natural scenario. 
 
   
-  - Goal: Make real-time translation from live photos with text
+  - 🌪 Goal: Make real-time translation from live photos with text
   
-  - Solution Steps:
+  - 💫 Solution Steps:
     1. Detect Pixels containing words
     2. Recognize words in source language
     3. Translate into Specified language
   
-  - Value:
+  - 🌊 Value:
     - Conveniently complete image -> text translation in any natural scenarios
     - Beneficial for travelling, business meeting, education, etc.
   
@@ -36,13 +36,13 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 
 <details >
 <summary>
- <strong>Model</strong>
+ <strong>🍻 Model</strong>
 </summary>
   
 
  <details open>
  <summary>
-  <strong>Model Architecture</strong>
+  <strong>☕️ Model Architecture</strong>
  </summary>
 <img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167324908-2a0f45db-e54e-49d1-8f8b-478175fb3358.png">
 
@@ -54,7 +54,7 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 
  <details open>
  <summary>
-  <strong>Detector Model</strong>
+  <strong>🧊 Detector Model</strong>
  </summary>
 
 <img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167324951-57312e67-993a-4e50-879b-985ac1589b03.png">
@@ -71,7 +71,7 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 
  <details open>
  <summary>
-  <strong>Recognizor Model</strong>
+  <strong>🍰 Recognizor Model</strong>
  </summary>
 
 <img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167324972-e42b063c-7f47-4f07-9dfb-d5d11728015e.png">
@@ -88,7 +88,7 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 <br/>
 
 
-### Repository Directory
+### ⚓️ Repository Directory
 
 - `static`: css, JS and pre-trained model
 
@@ -107,7 +107,7 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 - `environment.yml`: Record dependencies
 
 
-### How to run?
+### 🚀 How to run?
 
 1. `conda env create -n <YOUR_ENVIRONMENT_NAME> -f environment.yml`
 
@@ -122,16 +122,16 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
  - Note: Default is http://127.0.0.1:5000
 
 
-### Results & Observations
+### 🌾 Results & Observations
 
 <details >
 <summary>
- <strong>Detection Model</strong>
+ <strong>🌼 Detection Model</strong>
 </summary>
  
   <img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167321711-24f7fa7b-410c-41f6-bef3-ea789ad0ac8b.png">
 
- Observations:
+  💐 Observations:
  
  - Among all models, using either precision, recall or F1 score as the evaluation metrix, EAST is always the superior than other models.
  
@@ -147,11 +147,11 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 
 <details >
 <summary>
- <strong>Recognition Model</strong>
+ <strong>🌸 Recognition Model</strong>
 </summary>
   <img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167321711-24f7fa7b-410c-41f6-bef3-ea789ad0ac8b.png">
 
-  Observations:
+  💐 Observations:
  
  - Aster is both the most accurate model, but has the largest throughput on both ICDAR-2013 & ICDAR-2015 datasets.
  
