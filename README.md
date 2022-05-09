@@ -14,7 +14,7 @@ COMSE6998_009_2022 Deep Learning System Performance | Final Project
   
 <br/>
   
-Current translation applications force users to manually input text sentences from a foreign language, which is both inconvenient to input and easily miswritten. Users might give up their✨ translation in the end. We simplify this process by letting users simply input live photos with text, and return real time translation results in any user-specified language. 
+Current translation applications force users to manually input text sentences from a foreign language, which is both inconvenient to input and easily miswritten. Users might give up their translation in the end. We simplify this process by letting users simply input live photos with text, and return real time translation results in any user-specified language. 
   
 We use **EAST** as the detection model and **ASTER** as the recognization model. Then we use the **google translation API** to acquire translation result in the target language. After launching this feature on the edge devices, users could do text translation in any natural scenario. 
 
