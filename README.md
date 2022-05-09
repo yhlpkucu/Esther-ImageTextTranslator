@@ -79,8 +79,46 @@ We use **EAST** as the detection model and **ASTER** as the recognization model.
 
 ### Results & Observations
 
-![image](https://user-images.githubusercontent.com/63638608/167321697-162bb75d-cfe9-4178-a625-f6fd90d1d5db.png)
+<details >
+<summary>
+ <strong>Detection Model</strong>
+</summary>
+ 
+  <img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167321711-24f7fa7b-410c-41f6-bef3-ea789ad0ac8b.png">
 
-![image](https://user-images.githubusercontent.com/63638608/167321711-24f7fa7b-410c-41f6-bef3-ea789ad0ac8b.png)
+ Observations:
+ 
+ - Among all models, using either precision, recall or F1 score as the evaluation metrix, EAST is always the superior than other models.
+ 
+ - In terms of speed, EAST is also the fastest model among all.
+ 
+ - Counter-intuitively, there is no clear relationship between accuracy and speed.
+ 
+
+</details>
+
+<br/>
+
+
+<details >
+<summary>
+ <strong>Recognition Model</strong>
+</summary>
+  <img width="505" alt="demo" src="https://user-images.githubusercontent.com/63638608/167321711-24f7fa7b-410c-41f6-bef3-ea789ad0ac8b.png">
+
+  Observations:
+ 
+ - Aster is both the most accurate model, but has the largest throughput on both ICDAR-2013 & ICDAR-2015 datasets.
+ 
+ - Model performance is not stable on different dataset, so there is no 'BEST' model.
+ 
+ - There is no clear relationship between model accuracy and throughput.
+ 
+
+</details>
+
+<br/>
+
+
 
 
